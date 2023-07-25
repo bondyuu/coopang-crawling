@@ -19,7 +19,7 @@ public class CoopangCrawlingApplication {
 
         crawlingUtils.setUp(new ChromeDriver(options));
 		crawlingUtils.openPage("https://link.coupang.com/a/4TubA");
-		
+		crawlingUtils.getReview();
 
 		crawlingUtils.tearDown();
 	}
