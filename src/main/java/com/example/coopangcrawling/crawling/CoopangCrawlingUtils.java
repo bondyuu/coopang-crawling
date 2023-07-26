@@ -34,15 +34,16 @@ public class CoopangCrawlingUtils {
 
     public void openPage(String url) {
         driver.get(url);
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
     }
 
     public void getReview() {
         List<Review> result = new ArrayList<>();
 
         for (int i = 0; i < TOTAL_NUM/PAGE_NUM; i++) {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5L));
             String html = driver.getPageSource();
-
+            System.out.println(html);
             Document doc = Jsoup.parse(html);
             Elements elements = doc.getElementsByTag("article");
             List<Review> reviewList = parseReview(elements);
