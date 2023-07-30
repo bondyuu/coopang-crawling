@@ -24,6 +24,11 @@ dependencies {
 
 	implementation 'org.seleniumhq.selenium:selenium-java:4.6.0'
 	implementation 'org.jsoup:jsoup:1.15.3'
+
+	// xls 엑셀 파일 읽기 쓰기
+	implementation 'org.apache.poi:poi:4.1.2'
+	// xlsx 엑셀 파일 읽기 쓰기
+//	implementation 'org.apache.poi:poi-oomxl-schemas:4.1.2'
 }
 
 tasks.named('test') {
